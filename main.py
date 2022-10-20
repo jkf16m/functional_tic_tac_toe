@@ -9,8 +9,9 @@ def main():
         [ # This is the list of functions, they will be applied in order, the result of the previous function will be passed to the next one
             lambda g: ttt.game_step(g, 0, 0),
             lambda g: ttt.game_step(g, 0, 1),
-            lambda g: ttt.game_step(g, 0, 1),
             lambda g: ttt.game_step(g, 1, 1),
+            lambda g: ttt.game_step(g, 0,2),
+            lambda g: ttt.game_step(g, 2, 2),
             lambda g: ft.tap(g, lambda g: print(g)),
             lambda g: ft.tap(g, lambda g: print(ttt.get_grid_as_string(g)))
         ],
